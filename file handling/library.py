@@ -52,14 +52,21 @@ class Library():
             print(tabulate(message))
 
 def main():
-    book_name = str(input("enter books name :"))
-    book_id = str(input("enter book's ID :"))
-    book_author = str(input("enter book's author :"))
-    book_cateogry = str(input("enter book's category :"))
-    b1 = Book(book_id,book_name,book_author,book_cateogry)
-    lib = Library("book.txt")
-    lib.addBook(b1)
-    lib.showAllBooks()    
+    while(True):
+
+        book_name = str(input("enter books name :"))
+        book_id = str(input("enter book's ID :"))
+        book_author = str(input("enter book's author :"))
+        book_cateogry = str(input("enter book's category :"))
+        b1 = Book(book_id,book_name,book_author,book_cateogry)
+        lib = Library("book.txt")
+        lib.addBook(b1)
+        lib.showAllBooks()
+        quit_program=str(input("press q for quitting the program"))
+        if (quit_program=="q"):
+            break
+        else:
+            continue
   
 if __name__=="__main__":
     main()
