@@ -11,9 +11,6 @@ class Car:
     def getcarAcceleration(self):
         return self.__carAcceleration
 
-
-
-
 class Race:
     def __init__(self,raceLocation,raceDistance,racePrize):
         self.__raceLocation = raceLocation
